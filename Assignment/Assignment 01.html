@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html ng-app="MyModule">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+</head>
+<body>
+    <script>
+        var module = angular.module("MyModule", []);
+
+        module.controller("MyController", function ($scope) {
+            $scope.value = "capital";
+            $scope.value1 = "names of the animals";
+            $scope.value2 = "tiger";
+            $scope.value3 = "lion";
+            $scope.value4 = "giraffe";
+            $scope.value5 = "deer";
+            $scope.value6 = "dog";
+        });
+    </script>
+
+    <div ng-controller="MyController" align="center">
+        <h1>Filter demo Upper Case </h1>
+        <h3>{{value|uppercase}}</h3>
+        <table border="1" align="center">
+            <tr>
+              <td>{{value1 | uppercase}}</td>  
+            </tr>
+            <tr>
+            <td>{{value2 | uppercase}}</td>
+            </tr>
+            <tr>
+            <td>{{value3 | uppercase}}</td>
+            </tr>
+            <tr>
+                <td>{{value4 | uppercase}}</td>
+            </tr>
+            <tr>
+                <td>{{value5 | uppercase}}</td>
+            </tr>
+            <tr>
+                <td>{{value6 | uppercase}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
